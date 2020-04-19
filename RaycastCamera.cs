@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Raycast : MonoBehaviour
+public class RaycastCamera : MonoBehaviour
 {
     // Starting variables.
     int damage = 20;
