@@ -12,7 +12,7 @@ public class Raycast : MonoBehaviour
 
     private void Update()
     {
-        // Creating a Ray object to detect cubes/GameObjects.
+        // Creating a Ray object to detect cubes/GameObjects from the camera to the mouse position.
         Ray ray = camera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit; // Var to hold the instance of the GameObject the raycast is colliding with.
 
@@ -25,7 +25,7 @@ public class Raycast : MonoBehaviour
             // For visual purposes ONLY. (Scene View)
             Debug.DrawLine(ray.origin, hit.point, Color.green);
 
-            // Damaging the other GameObject if left-mouse button is pressed
+            // Damaging the other GameObject if left-mouse button is pressed.
             if (Input.GetKeyDown(KeyCode.Mouse0))
                 hit.transform.GetComponent<Damage>().TakeDamage(damage);
         }
